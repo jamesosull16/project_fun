@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-  <body>
+<body>
     <section class="section">
-      <div class="container">
-        <h1 class="title">Escape the House</h1>
+        <div class="container">
+            <h1 class="title">Escape the House</h1>
 
-        <div class="columns">
-          <div class="column">
-            Search Location
-            <div class="field has-addons">
-              <div class="control">
-                <input class="input" type="text" placeholder="..." />
-              </div>
-              <div class="control">
-                <a class="button is-info"> Search </a>
-              </div>
+            <div class="columns">
+                <div class="column">
+                    Search Location
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="..." />
+                        </div>
+                        <div class="control">
+                            <a class="button is-info"> Search </a>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div>The Holiday Box</div>
+                </div>
+
+                <div class="column">
+                    <span class="title is-5">Calendar of Events</span>
+                </div>
+
+
+                <div class="column">
+                    <span class="title is-5">*City* Event List for *Month Year*</span>
+
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Venue</th>
+                            </tr>
+                        </thead>
+
+
+
+                    </table>
+                </div>
+
             </div>
-
-            <hr />
-            <div>The Holiday Box</div>
-          </div>
-          <div class="column">Events List</div>
-          <div class="column">Calendar of Events</div>
-        </div>
-      </div>
     </section>
-  </body>
+</body>
+
 </html>
