@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
+    <title>Escape the House</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
@@ -11,29 +11,45 @@
   </head>
 
   <body>
-    <section class="section">
+    <section class="hero is-primary">
       <div class="container">
         <h1 class="title">Escape the House</h1>
+        <h2 class="subtitle">Description goes here</h2>
+      </div>
+    </section>
 
-        <div class="columns">
-          <div class="column">
-            Search Location
-            <div class="field has-addons">
-              <div class="control">
-                <input class="input" type="text" placeholder="..." />
-              </div>
-              <div class="control">
-                <a class="button is-info"> Search </a>
+    
+     <div class="columns">
+         <div class="column">
+             <div class="card">Search Location:
+                 <div class="card-content">
+                    <div class="field has-addons">
+                        <div class="control">
+                          <input class="input" type="text" placeholder="..." />
+                        </div>
+                        <div class="control">
+                          <a class="button is-info"> Search </a>
+                        </div>
+                      </div>          
+                 </div>
+             </div>
+         </div>
+         <div class="column">
+            Holiday Countdown
+            <div class="card">
+              <div class="card-content">
+                <h2 class="title">Holiday Countdown:</h2>
               </div>
             </div>
-
-            <hr />
-            <div>The Holiday Box</div>
           </div>
+     </div>
+
+          
+
           <div class="column">Events List</div>
           <div class="column">Calendar of Events</div>
         </div>
       </div>
-    </section>
+   
   </body>
 </html>
