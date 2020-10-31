@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
 
-<body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">Escape the House</h1>
-
-            <div class="columns">
-                <div class="column">
-                    Search Location
-                    <div class="field has-addons">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="..." />
-                        </div>
-                        <div class="control">
-                            <a class="button is-info"> Search </a>
-                        </div>
-                    </div>
-
-                    <hr />
-                    <div id="holiday-box"></div>
+  <body>
+    <section>
+        <h1 class="title is-1">Escape the House</h1>
+      </section>
+      <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+            <p class="title">Search</p>
+            <p>
+              <div class="field has-addons">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="..." />
+                  </div>
+                  <div class="control">
+                    <a class="button is-info"> Search </a>
+                  </div>
                 </div>
+            </p>
+          </div>
+          <div class="tile is-child box">
+            <p class="title">Holiday Box</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas
+              non massa sem. Etiam finibus odio quis feugiat facilisis.
+            </p>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="title">Calendar</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum
+              volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
+              maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis
+              semper odio felis ut quam.
+            </p>
+            <p>
+              Suspendisse varius ligula in molestie lacinia. Maecenas varius eget
+              ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus,
+              augue diam porttitor lorem, et sollicitudin felis neque sit amet
+              erat. Maecenas imperdiet felis nisi, fringilla luctus felis
+              hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim
+              turpis. Sed eget varius ligula, at volutpat tortor.
+            </p>
+            <p>
+              Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus
+              erat, vitae congue lectus dolor consequat libero. Donec leo ligula,
+              maximus et pellentesque sed, gravida a metus. Cras ullamcorper a
+              nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero.
+              Quisque non semper leo.
+            </p>
+          </div>
+        </div>
+      </div>
 
-                <div class="column">
-                    <span class="title is-5">Calendar of Events</span>
-                </div>
-
-
-                <div class="column">
-                    <span class="title is-5">*City* Event List for *Month Year*</span>
-
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Event</th>
-                                <th>Venue</th>
-                            </tr>
-                        </thead>
-
-
-
-                    </table>
-                </div>
-
-            </div>
-    </section>
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
-
