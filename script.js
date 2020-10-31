@@ -27,7 +27,8 @@ $(document).ready(function () {
       }
     });
   };
-
-  //event listeners
-  $(".is-info").on("click", getHolidays);
+  getHolidays();
 });
+
+//event listeners
+$(".is-info").on("click");
