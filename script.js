@@ -1,7 +1,8 @@
 $(document).ready(function () {
   var getHolidays = function () {
-    var currentDate = moment().format("mm/dd/yyyy");
+    var currentDate = moment().format("MM/DD/YYYY");
     console.log(currentDate);
+    var year = moment().
 
     var requestUrl = `https://holidays.abstractapi.com/v1/?api_key=7639aa293d574a51bbeed5c5a63d90ac&country=US&year=${yyyy}`;
     //ajax call
