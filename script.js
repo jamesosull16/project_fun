@@ -1,16 +1,7 @@
 $(document).ready(function () {
   var getHolidays = function () {
-    var currentDate = new Date();
-    var dd = currentDate.getDate();
-    var mm = currentDate.getMonth();
-    var yyyy = currentDate.getFullYear();
-    if (dd < 10) {
-      dd = "0" + dd;
-    }
-    if (mm < 10) {
-      mm = 0 + mm;
-    }
-    currentDate = mm + "/" + dd + "/" + yyyy;
+    var currentDate = moment().format("mm/dd/yyyy");
+    console.log(currentDate);
 
     var requestUrl = `https://holidays.abstractapi.com/v1/?api_key=7639aa293d574a51bbeed5c5a63d90ac&country=US&year=${yyyy}`;
     //ajax call
