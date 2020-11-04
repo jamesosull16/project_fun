@@ -9,3 +9,7 @@
   align-items: flex-start;
   display: block;
 }
+
+div.projCal {
+  transform: scale(1.5, 1.5) translate(45px, 55px);
+}
