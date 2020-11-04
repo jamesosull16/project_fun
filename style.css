@@ -4,3 +4,8 @@
   background: lightblue;
   font-size: 30px;
 }
+
+.tabs {
+  align-items: flex-start;
+  display: block;
+}
