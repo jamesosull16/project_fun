@@ -1,28 +1,43 @@
 $(document).ready(function () {
   var getHolidays = function () {
-    var currentDate = moment().format("MM/DD/YYYY");
-    console.log(currentDate);
-    var year = moment().
+    var year = moment().year();
 
-    var requestUrl = `https://holidays.abstractapi.com/v1/?api_key=7639aa293d574a51bbeed5c5a63d90ac&country=US&year=${yyyy}`;
+    var requestUrl = `https://holidays.abstractapi.com/v1/?api_key=7639aa293d574a51bbeed5c5a63d90ac&country=US&year=${year}`;
     //ajax call
     $.ajax({
       url: requestUrl,
       method: "GET",
     }).then(function (data) {
       console.log(data);
-      for (i = 0; i < 3; i++) {
+      //   var holidaysDisplayed = 0;
+      for (i = 0; i < data.lenth; i++) {
         var holiday = $("#holiday-box");
+
+        var currentDate = moment().format("MM/DD/YYYY");
+        console.log(currentDate);
+
+        var holidayDate = data[i].date;
+        holidayDate = moment(holidayDate).format("MM/DD/YYYY");
+        console.log(holidayDate);
+
         var holidayName = $("<h3>");
-        var holidayDate = $("<h3>");
+        var holidayDateEl = $("<h3>");
 
         holidayName.text("Holiday: " + data[i].name);
-        holidayDate.text("Date: " + data[i].date);
+        holidayDateEl.text("Date: " + holidayDate);
 
-        if (holidayDate > currentDate) {
-          // if (new Date(holidayDate).getTime() > new Date(currentDate).getTime()) {
+        var difference = moment(holidayDate).diff(moment(), "d");
+
+        console.log(difference);
+
+        if (difference > 0) {
+          //   holidaysDisplayed++;
+          //   console.log(holidaysDisplayed);
           holiday.append(holidayName);
-          holiday.append(holidayDate);
+          holiday.append(holidayDateEl);
+
+          //   if (holidaysDisplayed > 2) {
+          //     return;
         }
       }
     });
