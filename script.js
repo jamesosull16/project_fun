@@ -9,8 +9,8 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (data) {
       console.log(data);
-      //   var holidaysDisplayed = 0;
-      for (i = 0; i < data.lenth; i++) {
+      var holidaysDisplayed = 0;
+      for (i = 0; i < data.length; i++) {
         var holiday = $("#holiday-box");
 
         var currentDate = moment().format("MM/DD/YYYY");
@@ -31,19 +31,17 @@ $(document).ready(function () {
         console.log(difference);
 
         if (difference > 0) {
-          //   holidaysDisplayed++;
-          //   console.log(holidaysDisplayed);
+          holidaysDisplayed++;
+          console.log(holidaysDisplayed);
           holiday.append(holidayName);
           holiday.append(holidayDateEl);
 
-          //   if (holidaysDisplayed > 2) {
-          //     return;
+          if (holidaysDisplayed > 2) {
+            return;
+          }
         }
       }
     });
   };
   getHolidays();
 });
-
-//event listeners
-$(".is-info").on("click");
