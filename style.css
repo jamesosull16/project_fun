@@ -5,11 +5,7 @@
   font-size: 30px;
 }
 
-#TMCalendar {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-size: 100% !important;
-  font: inherit !important;
-  vertical-align: baseline !important;
+.tabs {
+  align-items: flex-start;
+  display: block;
 }
