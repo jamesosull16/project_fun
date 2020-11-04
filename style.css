@@ -31,3 +31,15 @@ body {
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
+
+.title-is-1 {
+  background: lightblue;
+  font-size: 30px;
+}
+.tabs {
+  align-items: flex-start;
+  display: block;
+}
+div.projCal {
+  transform: scale(1.5, 1.5) translate(45px, 55px);
+}
