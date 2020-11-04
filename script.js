@@ -1,28 +1,46 @@
 $(document).ready(function () {
   var getHolidays = function () {
-    var requestUrl = `https://calendarific.com/api/v2/holidays?&country=US&year=2020&type=national&api_key=243b50890c210a5cfad34ab2a2a57915a0dc10bb`;
+    var year = moment().year();
+
+    var requestUrl = `https://holidays.abstractapi.com/v1/?api_key=7639aa293d574a51bbeed5c5a63d90ac&country=US&year=${year}`;
     //ajax call
     $.ajax({
       url: requestUrl,
       method: "GET",
     }).then(function (data) {
       console.log(data);
-      for (i = 0; i < 3; i++) {
+      var holidaysDisplayed = 0;
+      for (i = 0; i < data.length; i++) {
         var holiday = $("#holiday-box");
-        var holidayName = $("<h3>");
-        var holidayDate = $("<h3>");
 
         var currentDate = moment().format("MM/DD/YYYY");
+        console.log(currentDate);
 
-        holidayName.text("Holiday: " + data.response.holidays[i].name);
-        holidayDate.text(
-          "Date: " +
-          moment(data.response.holidays[i].date.iso).format("MM/DD/YYYY")
-        );
+        var holidayDate = data[i].date;
+        holidayDate = moment(holidayDate).format("MM/DD/YYYY");
+        console.log(holidayDate);
 
-        if (holidayDate > currentDate) {
+        var holidayName = $("<h3>");
+        var holidayDateEl = $("<h3>");
+
+ futureholidays
+        holidayName.text("Holiday: " + data[i].name);
+        holidayDateEl.text("Date: " + holidayDate);
+
+
+        var difference = moment(holidayDate).diff(moment(), "d");
+
+        console.log(difference);
+
+        if (difference > 0) {
+          holidaysDisplayed++;
+          console.log(holidaysDisplayed);
           holiday.append(holidayName);
-          holiday.append(holidayDate);
+          holiday.append(holidayDateEl);
+
+          if (holidaysDisplayed > 2) {
+            return;
+          }
         }
       }
     });
@@ -44,6 +62,3 @@ $(document).ready(function () {
   getHolidays();
 
 });
-
-//event listeners
-$(".is-info").on("click");
