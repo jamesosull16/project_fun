@@ -26,14 +26,15 @@ $(document).ready(function () {
         //gettng the different between the date of the holiday and the current date in days to compare in the if statement
         var difference = moment(holidayDate).diff(moment(), "d");
 
-        //this will display the current and next 3 holidays
+        //since we are using the current date as the starting point, holidays in the past will return a negative # and holidays in the future a positive #
+        //using 'difference >= 0', this will display the current however many future holidays we decide below
         if (difference >= 0) {
           //counting the holidays displayed
           holidaysDisplayed++;
           holiday.append(holidayName);
           holiday.append(holidayDateEl);
-          //decided on displaying the next 3 holidays.  The return will exit out of the function once 3 have been displayed.
-          if (holidaysDisplayed > 2) {
+          //decided on displaying the next 5 holidays.  The return will exit out of the function once 5 have been displayed.
+          if (holidaysDisplayed > 4) {
             return;
           }
         }
@@ -44,6 +45,7 @@ $(document).ready(function () {
   // On button click: get city from input field and display calendar
   $("#searchButton").click(function (e) {
     e.preventDefault();
+
     // First clear any previous calendar
     $("#calendarSection").empty();
     // Get city from text input and display TM calendar
