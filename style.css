@@ -32,10 +32,15 @@ body {
   line-height: 3;
 }
 
+#holiday-box {
+  font-family: "Unna", serif;
+  color: black;
+}
+
 .column {
   display: flex;
   justify-content: center;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Lato", sans-serif;
 }
 
 .wrap {
