@@ -6,13 +6,13 @@ $(document).ready(function () {
         var city = response.city;
         var countryCode = response.countryCode;
         $("#calendarSection").append(
-          "<p class='title'>" +
+          "<div class = 'wrap'> <p class='title'>" +
             city +
             " Events</p><div class='projCal' w-type='calendar' w-tmapikey='hHXZ1EuJQGj9RCmG0Zi8qJAdIfdz7Sii' w-keyword='' w-theme='calendar' w-colorscheme='light' w-width='298' w-height='400' w-size='50' w-border='1' w-borderradius='4' w-postalcode='' w-radius='25' w-countrycode=" +
             countryCode +
             " w-city=" +
             city +
-            " w-period='week' w-periodweek='week' w-layout='vertical' w-classificationid='' w-attractionid='' w-promoterid='' w-venueid='' w-affiliateid='' w-segmentid='' w-proportion='standart' w-latlong=''></div>"
+            " w-period='week' w-periodweek='week' w-layout='vertical' w-classificationid='' w-attractionid='' w-promoterid='' w-venueid='' w-affiliateid='' w-segmentid='' w-proportion='standart' w-latlong=''></div></div>"
         );
         $.getScript(
           "https://ticketmaster-api-staging.github.io/products-and-docs/widgets/calendar/1.0.0/lib/main-widget.js",

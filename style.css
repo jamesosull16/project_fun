@@ -42,15 +42,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-.title1 {
+.title {
   font-size: 25px;
   color: black;
   text-decoration-line: underline;
-}
-.title {
-  color: black;
-  font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .diagonal-hero-bg {
@@ -67,5 +62,5 @@ body {
   display: block;
 }
 div.projCal {
-  transform: scale(1.5, 1.5) translate(45px, 55px);
+  transform: scale(1.25, 1.25) translate(-5px, 52px);
 }
