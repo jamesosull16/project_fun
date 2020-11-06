@@ -43,9 +43,7 @@ $(document).ready(function () {
   };
 
   // On button click: get city from input field and display calendar
-  $("#searchButton").click(function (e) {
-    e.preventDefault();
-
+  var calendar = function () {
     // First clear any previous calendar
     $("#calendarSection").empty();
     // Get city from text input and display TM calendar
@@ -65,6 +63,18 @@ $(document).ready(function () {
         console.log("Load was performed.");
       }
     );
+  };
+
+  $("#searchButton").on("click", function (e) {
+    e.preventDefault();
+    calendar();
+  });
+
+  $(document).on("keypress", function (e) {
+    if (e.which == 13) {
+      e.preventDefault();
+      calendar();
+    }
   });
 
   getHolidays();
