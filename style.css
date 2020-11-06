@@ -9,11 +9,48 @@ body {
   position: relative;
 }
 
+#header {
+  background: url(./images/Screen\ Shot\ 2020-11-05\ at\ 9.17.32\ PM.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+}
 .name {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 50px;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Dancing Script", cursive;
+  padding-top: 5.5%;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 3;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+.title1 {
+  font-size: 25px;
+  color: black;
+  text-decoration-line: underline;
+}
+.title {
+  color: black;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .diagonal-hero-bg {
@@ -22,20 +59,9 @@ body {
   left: 0;
   width: 100%;
   height: 400px;
-  background: linear-gradient(
-    to right,
-    #4e4376,
-    #2b5876
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
 
-.title-is-1 {
-  background: lightblue;
-  font-size: 30px;
-}
 .tabs {
   align-items: flex-start;
   display: block;
