@@ -27,13 +27,13 @@ We created an application that helps you get out of the house by finding local e
 
 ## Index:
 
-Why Built
-Installation
-Usage
-Concepts
-Issues with the Ticketmaster Calendar
-Future Ideas
-Credits
+- Why Built
+- Installation
+- Usage
+- Concepts
+- Issues with the Ticketmaster Calendar
+- Future Ideas
+- Credits
 
 ### Why Built:
 
